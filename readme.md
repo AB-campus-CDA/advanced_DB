@@ -10,16 +10,17 @@ use :
 
 # Installation process
 
- - ### launch docker-compose
+ - ### Step 1 : launch docker-compose
 	>		docker-compose up --build
    
-  - ### Connect to the apache container
+  - ### If you need to acces to the differents containers : 
+    - ### Connect to the apache container
   
-	> 		docker exec -it docker_apache bash
+    >             docker exec -it docker_apache bash
 	
-  - ### Connect to the mysql container
+      - ### Connect to the mysql container
   
-	> 		docker exec -it docker_mysql bash
+    >             docker exec -it docker_mysql bash
 	
 
 # Documentation

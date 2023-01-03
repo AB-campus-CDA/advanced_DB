@@ -10,26 +10,25 @@ create schema query_playground collate utf8mb4_unicode_ci;
 create table if not exists test_1.users
 (
     id     int auto_increment,
-    names  varchar(255) null,
+    name  varchar(255) null,
     salary int,
     constraint users_id_uindex
         unique (id)
 );
-insert into test_1.users (names, salary)
-VALUES ('Tim', 400),
-       ('Faab', 250),
-       ('Jesper', 225),
-       ('Turtle', 401);
+insert into test_1.users (id, name, salary)
+VALUES (2304,'Tim', 400),
+       (1996,'Faab', 250),
+       (8181,'Jesper', 225);
 
 create table if not exists test_2.users
 (
     id     int auto_increment,
-    names  varchar(255) null,
+    name  varchar(255) null,
     salary int,
     constraint users_id_uindex
         unique (id)
 );
-insert into test_2.users (id, names, salary)
+insert into test_2.users (id, name, salary)
 VALUES (2304, 'Tim', 400),
        (1996, 'Faab', 250),
        (8181, 'Jesper', 225),
@@ -41,16 +40,16 @@ VALUES (2304, 'Tim', 400),
 create table if not exists test_2.department
 (
     id         int auto_increment,
-    names      varchar(255) null,
+    name      varchar(255) null,
     manager_id int,
     constraint department_id_uindex
         unique (id)
 );
-insert into test_2.department (id, names, manager_id)
+insert into test_2.department (id, name, manager_id)
 VALUES (1, 'Headvillage', 2304),
        (4, 'Mob', 147),
        (7, 'Mountain', 9999),
-       (9, 'Amstelpaat', 3698);
+       (9, 'Amstelpeat', 3698);
 
 create table if not exists test_2.employees
 (
