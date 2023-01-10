@@ -91,10 +91,10 @@ INSERT INTO `customers` (`id`, `first_name`, `last_name`, `address`, `postal_cod
 
 
 INSERT INTO `orders` (`id`, `number`, `customer_id`, `date`, `total`) VALUES
-('1', '0000000001', '1', '2020-12-09 21:35:21', NULL),
-('2', '0000000002', '1', '2020-12-01 22:35:21', NULL),
+('1', '0000000001', '1', '2023-01-09 21:35:21', NULL),
+('2', '0000000002', '1', '2023-01-01 22:35:21', NULL),
 ('3', '0000000003', '2', '2020-12-01 22:35:21', NULL),
-('4', '0000000004', '2', '2020-12-01 22:35:21', NULL),
+('4', '0000000004', '2', CURRENT_DATE, NULL),
 ('5', '0000000005', '2', '2020-12-09 22:35:21', NULL);
 
 INSERT INTO `products` (`id`, `category_id`, `name`, `description`, `image`, `price`, `weight`, `available`, `quantity`) VALUES

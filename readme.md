@@ -17,6 +17,10 @@ use :
     - ### Connect to the apache container
   
     >             docker exec -it docker_apache bash
+	- 
+    - ### Connect to the php container
+  
+    >             docker exec -it docker_php bash
 	
       - ### Connect to the mysql container
   

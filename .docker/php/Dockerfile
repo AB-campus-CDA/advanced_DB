@@ -3,8 +3,8 @@ FROM php:8.1-fpm
 # CONF PHP
 RUN apt-get update && apt-get install -y zlib1g-dev libicu-dev g++ libmcrypt-dev locales libmagickwand-dev libcurl4-gnutls-dev zip unzip
 RUN apt-get -y install libcurl4-openssl-dev pkg-config libssl-dev
+RUN docker-php-ext-install pdo pdo_mysql intl
 RUN docker-php-ext-configure intl
-RUN docker-php-ext-install intl
 #RUN pecl install mongodb && docker-php-ext-enable mongodb
 
 ## NODE JS
@@ -40,11 +40,11 @@ RUN chown -R  www-data.www-data /var/www/.composer
 RUN chown -R  www-data.www-data /var/www/.npm
 RUN chown -R  www-data.www-data /var/www/.config
 
-COPY startQuery.sh /
-RUN chmod +x /startQuery.sh
-#RUN /startQuery.sh
-ENTRYPOINT ["/startQuery.sh"]
-USER www-data
+#COPY startQuery.sh /
+#RUN chmod +x /startQuery.sh
+##RUN /startQuery.sh
+#ENTRYPOINT ["/startQuery.sh"]
+#USER www-data
 
 
 WORKDIR /home/wwwroot
