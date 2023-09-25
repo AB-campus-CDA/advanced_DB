@@ -1,0 +1,6 @@
+- Créer une commande de 3 articles différents (avec ses lignes de commande associées)
+- Ajouter un produit avec sa catégorie et sa quantité
+- Ajouter 100 à la quantité en stock d‘un produit
+- Augmenter de 5% le prix des produits d’une catégorie donnée
+- Supprimer un article
+- Supprimer les clients qui n’ont pas de commande
