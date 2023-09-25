@@ -1,4 +1,5 @@
 # get last order number and convert to integer
+#//TODO change LPAD(id +1 with something like LPAD( parseInt(number)+1 ...
 SELECT @next_number := LPAD(id + 1,10, 0) FROM orders
 WHERE id = (
     SELECT
