@@ -1,4 +1,4 @@
-/*CREATE VIEW Availability AS
+/*CREATE VIEW FullAvailability AS
 
 SELECT categories.name, IFNULL(available, 1) AS availability
 FROM categories
@@ -10,5 +10,5 @@ FROM categories
                           GROUP BY categories.name) AS NotAvailCateg
                          ON NotAvailCateg.notAvail = categories.name;*/
 
-SELECT name FROM Availability
+SELECT name FROM FullAvailability
 WHERE availability;

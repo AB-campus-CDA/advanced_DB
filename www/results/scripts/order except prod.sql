@@ -1,6 +1,6 @@
 
 SELECT * FROM Ordered_products
-WHERE order_id NOT IN (
+WHERE id NOT IN (
     SELECT orders.id
     FROM orders
              JOIN order_product
