@@ -1,0 +1,1 @@
+SELECT SUM(price * quantity) AS stock_value FROM products;
