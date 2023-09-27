@@ -1,3 +1,4 @@
+# test 2
 CREATE VIEW depart_employees AS
 SELECT
     users.id AS user_id,
