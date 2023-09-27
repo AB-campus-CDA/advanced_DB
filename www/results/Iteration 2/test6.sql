@@ -1,4 +1,4 @@
-SELECT bill_id, euro_cache, employee, 'Amsterdam'
+SELECT bill_id, euro_cache, employee, 'Amsterdam' AS plaats
 FROM bills_amsterdam
 UNION ALL
 SELECT bill_id, euro_cache, employee, 'Antwerpen'
