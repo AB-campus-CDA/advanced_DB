@@ -1,0 +1,18 @@
+{
+    "name": "aurelbou/game-project",
+    "description": "any square shaped board game",
+    "autoload": {
+        "psr-4": {
+            "Aurelbou\\GameProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AurelBouchard",
+            "email": "au.bouchard@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*"
+    }
+}
