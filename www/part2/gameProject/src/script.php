@@ -2,20 +2,24 @@
 
 require '../vendor/autoload.php';
 
-use Aurelbou\GameProject\Connection;
 use Aurelbou\GameProject\DAO\UserDAO;
 use Aurelbou\GameProject\DTO\UserDTO;
 
 
 $userDAO = new UserDAO;
-$user = $userDAO->getUserById(1);
-echo $user->getAge();
-
-
 
 /*
-$user = new \Aurelbou\GameProject\DAO\UserDTO([
+$user = $userDAO->getUserById(1);
+print_r($user);
+*/
+
+
+// create new user
+$user = new UserDTO([
+    'login' => 'bidul',
+    'password' => 'hashedPassword',
     'email' => 'MonEmail@teSt.coM'
 ]);
+
 $userDAO->createUser($user);
-*/
+

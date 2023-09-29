@@ -1,6 +1,6 @@
 <?php
 
-namespace Aurelbou\GameProject\DAO;
+namespace Aurelbou\GameProject\DTO;
 
 use DateTime;
 
@@ -8,6 +8,11 @@ class UserDTO
 {
     public function __construct($user)
     {
+        $fake_bd = new DateTime();
+
+        $this->setLogin($user['login']);
+        $this->setPassword($user['password']);
+        $this->setBirthDate($fake_bd);
         $this->setEmail($user['email']);
     }
     private $email;
@@ -24,6 +29,32 @@ class UserDTO
         return $this->tokens;
     }
 
+    public function setLogin(string $login):void {
+        $this->login = $login;
+    }
+    public function getLogin(): string {
+        return $this->login;
+    }
+
+    public function setPassword(string $hash):void {
+        $this->password = $hash;
+    }
+
+    public function getPassword(): string {
+        return $this->password;
+    }
+
+    public function setBirthDate($bd): void {
+
+        $this->birth_date = strtotime($bd);
+    }
+    public function getBirthDate(): DateTime {
+        return $this->birth_date;
+    }
+
+    public function getEmail(): string {
+        return $this->email;
+    }
     public function setEmail($email): void{
         $this->email = strtolower($email) ;
     }
