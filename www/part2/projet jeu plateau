@@ -1,0 +1,55 @@
+brouillon cahier des charges
+
+utilisateurs : tout les droits sur ses propres données
+données utilisateurs :
+identifiants (unique)
+mot de passe
+avatar
+pseudo (unique ?)
+email (unique)
+tel
+date de naissance
+accord parental (boolean)
+lien vers compte d'un parent (mageur)
+
+
+
+tables relationnelles
+joueur_perso_jeux
+historiques, pions préférés
+
+
+historique des sessions
+
+SESSION
+sessions de jeux (historique de coups)
+statut (en cours, fini, gagné/perdu/exeq ?, date debut, date dernier coup)
+
+
+historique des achats
+jetons, fonctionnlités
+
+views pour les statistiques
+
+
+
+base de donnée jeu
+tables :
+jeu_1, jeu_2, jeu_3
+tarif des personnalisation
+niveau
+
+
+TABLES jeux
+nom, taille, age mini, n joueurs (defaut 2),
+
+TABLES plateau
+dimension, taille, couleur
+
+TABLE pion
+motif, image, couleur 
+
+
+TABLES tarif
+prix / pack jeton
+n jeton / type de personnalisation
